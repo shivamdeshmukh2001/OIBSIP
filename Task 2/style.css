@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --primary-color:rgb(197, 20, 138);
+    --black-color:black;
+    --white-color:white;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 30px 0;
+    z-index: 1000;
+    transition: all 0.5s ease;
+    display: block;
+    background-color: rgb(189, 217, 243);
+}
+
+nav .navbar{
+    width:75%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:auto;
+}
+
+nav .navbar .logo a{
+    font-weight: bolder;
+    font-size: 35px;
+    color:var(--primary-color);
+}
+
+nav .navbar .logo a span{
+    color: black;
+    transition: all 0.3s ease;
+}
+
+nav .navbar .menu{
+    position: relative;
+    flex-direction: column;
+    align-items:center;
+    transition: all 0.5s ease;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+    
+}
+.navbar .menu li a:hover{
+    color: var(--black-color)
+}
+
+
+.home{
+    height:700px;
+    width:100%;
+    background-color: rgb(240, 150, 135);
+    background-size:contain;
+    background-position: right center;
+    background-attachment: fixed;
+}
+
+.home .home-content{
+    width: 75%;
+    height:100%;
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home .line-1{
+    font-size:30px;
+    color:var(--black-color);
+}
+
+.home .line-2{
+    color:var(--black-color);
+    font-size: 50px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .line-3{
+    font-size: 35px;
+    margin:5px 0;
+    color:var(--primary-color);
+}
+
+
+.home .button button{
+    outline:none;
+    padding:8px 16px;
+    border-radius: 6px;
+    font-size: 25px;
+    font-weight: 400;
+    background:var(--primary-color);
+    color:var(--white-color);
+    cursor:pointer;
+    border:2px solid transparent;
+    transition: all 0.4s ease;
+}
+
+.home .button button:hover{
+    border-color:var(--primary-color);
+    background-color: var(--white-color);
+    color:var(--primary-color);
+}
+section{
+    padding-top:40px;
+}
+section .content{
+    width:80%;
+    margin:40px auto;
+    font-family: 'Poppins', sans-serif;
+}
+section .title{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+section .title span{
+    color:var(--black-color);
+    font-size: 30px;
+    font-weight: 600;
+    position:relative;
+    padding-bottom:8px;
+}
+section .title span::before,
+section .title span::after{
+    content:'';
+    position:absolute;
+    height:3px;
+    width:100%;
+    background:var(--primary-color);
+    left:0;
+    bottom:0;
+}
+section .title span::after{
+    bottom:-7px;
+    width:70%;
+    left:50%;
+    transform:translateX(-50%);
+}
+.about .about-details{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.about .about-details .left{
+    width:45%;
+}
+.about .left img{
+    height:400px;
+    width:400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.about .about-details .right{
+    width:55%;
+}
+section .topic{
+    color:var(--black-color);
+    font-size:25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.about-details .right .topic span{
+    color: var(--primary-color);
+}
+.about-details .right p{
+    text-align: justify;
+    color:var(--black-color);
+    font-size: 20px;
+}
+section .button{
+    margin:16px 0;
+}
+section .button button{
+    outline:none;
+    padding:8px 16px;
+    border-radius: 4px;
+    font-size: 25px;
+    font-weight: 400;
+    background: var(--primary-color);
+    color:var(--white-color);
+    border:2px solid transparent;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+section .button button:hover{
+    border-color:var(--primary-color);
+    background-color: var(--white-color);
+    color:var(--primary-color);
+}
+section .button a{
+    color: white;
+}
+
+.skills{
+    background:rgb(194, 187, 187);
+}
+.skills .content{
+    padding:40px 0;
+}
+.skills .skills-details{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skills-details .text{
+    width:50%;
+}
+.skills-details p{
+    color:var(--black-color);
+    text-align: justify;
+}
+
+.skills-details .boxes{
+    width:45%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+.skills-details .box{
+    width:calc(100% / 2 - 20px);
+    margin:20px 0;
+}
+.skills-details .boxes .topic{
+    font-size: 20px;
+    color:var(--black-color);
+}
+.skills-details .boxes .per{
+    font-size: 60px;
+    color:var(--primary-color);
+}
+
+.contact{
+    background: #f0f8ff;
+}
+.contact .content{
+    margin:0 auto;
+    padding:30px 0;
+}
+
+.contact .text{
+    width:80%;
+    text-align: center;
+    margin:auto;
+}
+
+.contact input {
+    text-align: center;
+    display: block;
+    width: auto;
+    padding: 1px;
+    border: 1px solid var(--primary-color);
+    width: 508px;
+    margin: 10px 300px;
+    font-size: 25px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+section .submit{
+    margin:16px 500px;
+}
+section .submit button{
+    outline:none;
+    padding:8px 16px;
+    border-radius: 4px;
+    font-size: 25px;
+    font-weight: 400;
+    background: var(--primary-color);
+    color:var(--white-color);
+    border:2px solid transparent;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+section .submit button:hover{
+    border-color:var(--primary-color);
+    background-color: var(--white-color);
+    color:var(--primary-color);
+}
+
+footer{
+    background:var(--primary-color);
+    padding:15px 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer .text a{
+    color: var(--black-color);
+    text-decoration: underline;
+}
